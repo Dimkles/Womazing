@@ -28,6 +28,7 @@ export function isWebp() {
 export function headerFixed() {
   const header = document.querySelector('.header')
   const firstScreen = document.querySelector('[data-observ]')
+  firstScreen.style.height = header.offsetHeight / 2 + 'px'
 
   const headerStickyObserver = new IntersectionObserver(([entry]) => {
     header.classList.toggle('sticky', !entry.isIntersecting)
