@@ -1,0 +1,119 @@
+.first-screen {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc(50% - 65px);
+        height: 100%;
+        display: block;
+        top: 0;
+        right: 0;
+        background-color: $yellowColor;
+    }
+
+    &__container {
+        display: flex;
+        min-height: 80vh;
+        align-items: center;
+        gap: 65px;
+
+    }
+
+    &__slider {
+        flex: 0 0 50%;
+
+        & .swiper-wrapper {
+            margin-bottom: 110px;
+
+        }
+
+        & .swiper-slide {
+            height: auto;
+        }
+
+        & .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+
+            &-bullet {
+                width: 30px;
+                height: 4px;
+                background: #D1D1D1;
+                transition: 0.5s;
+                cursor: pointer;
+
+                &-active {
+                    background: $blackColor;
+                }
+            }
+        }
+    }
+
+    &__images {
+        flex: 0 1 50%;
+    }
+
+    &__offer {}
+}
+
+.offer-first-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    &__title {
+        margin-bottom: 45px;
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 1.1em;
+        letter-spacing: 0.02em;
+    }
+
+    &__text {
+        @include adaptiveClamp('padding-right', 170, 0, $widthTo: 768);
+        font-size: 20px;
+        line-height: 1.4em;
+        text-align: right;
+        letter-spacing: 0.02em;
+        margin-bottom: 52px;
+        flex: 1 1 auto;
+    }
+}
+
+.images-first-screen {
+    height: 646px;
+    padding-left: 50px;
+    padding-bottom: 60px;
+    position: relative;
+
+    &__main {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        & img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__left {
+        z-index: 3;
+        position: absolute;
+    }
+
+    &__right {
+        z-index: 3;
+        right: -100px;
+        top: 40%;
+        position: absolute;
+    }
+}

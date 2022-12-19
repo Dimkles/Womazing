@@ -3,8 +3,7 @@ import { isWebp, headerFixed } from './modules'
 // import { MousePRLX } from './libs/parallaxMouse'
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
-
+import Swiper, { Pagination, Autoplay } from 'swiper'
 // Проверка браузера на поддерку .webp изображений ====================================================================================================================================================
 isWebp()
 // ====================================================================================================================================================
@@ -16,3 +15,20 @@ isWebp()
 // Фиксированный header ====================================================================================================================================================
 headerFixed()
 // ====================================================================================================================================================
+
+const firstScreenSlider = new Swiper('.swiper', {
+
+    modules: [Pagination, Autoplay],
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    spaceBetween: 50,
+    grabCursor: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+});

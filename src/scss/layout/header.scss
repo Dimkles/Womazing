@@ -22,7 +22,11 @@
 		height: rem($headerHeight);
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		gap: 50px;
+	}
+
+	&__menu {
+		flex: auto;
 	}
 
 

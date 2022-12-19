@@ -1,1 +1,24 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+._button {
+    display: inline-block;
+    background: $greenColor;
+    color: white;
+    padding: rem(22) rem(50);
+    transition: all 0.5s ease;
+
+    &:hover {
+        background: #509498;
+    }
+
+    &--white {
+        border: 1px solid $greenColor;
+        background: white;
+        color: $greenColor;
+
+        &:hover {
+            background: $greenColor;
+            color: white;
+        }
+    }
+}
